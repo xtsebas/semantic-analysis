@@ -162,12 +162,3 @@ pytest -q
    ```
 
 ---
-
-## 🙌 Contribuciones
-
-1. Crea una rama `feature/tu-feature`  
-2. Haz commits descriptivos  
-3. Abre un Pull Request hacia `main`  
-4. Ejecuta `pytest` y verifica que todo pase
-
----
