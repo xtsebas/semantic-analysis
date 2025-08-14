@@ -148,7 +148,17 @@ pytest -q
    ```
 2. **Correr contenedor**  
    ```bash
-   docker run --rm -v "$(pwd)":/work -w /work cps-analyzer      bash -c "antlr-4 program/Compiscript.g4 && python program/Driver.py program/program.cps"
+   docker run --rm -ti -v "$(pwd)":/work -w /work cps-analyzer
+   ```
+3. **Generar lexer/parser de ANTLR (Python)**  
+   ```bash
+  cd program
+  antlr -Dlanguage=Python3 -visitor -no-listener Compiscript.g4
+   ```
+4. **Volver a la raíz y correr el driver**  
+   ```bash
+  cd ..
+  python3 program/Driver.py program/program.cps
    ```
 
 ---
