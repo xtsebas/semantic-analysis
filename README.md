@@ -142,23 +142,58 @@ pytest -q
 
 ## 🐳 Uso con Docker
 
+### Análisis por línea de comandos
+
 1. **Construir imagen**  
    ```bash
    docker build -t cps-analyzer .
    ```
-2. **Correr contenedor**  
+
+2. **Correr contenedor interactivo**  
    ```bash
+   # Linux/Mac:
    docker run --rm -ti -v "$(pwd)":/work -w /work cps-analyzer
+   
+   # Windows (Git Bash/MSYS2):
+   MSYS_NO_PATHCONV=1 docker run --rm -ti -v "C:\ruta\completa\al\proyecto":/work -w /work cps-analyzer
    ```
+
 3. **Generar lexer/parser de ANTLR (Python)**  
    ```bash
-  cd program
-  antlr -Dlanguage=Python3 -visitor -no-listener Compiscript.g4
+   cd program
+   antlr -Dlanguage=Python3 -visitor -no-listener Compiscript.g4
+   cd ..
    ```
-4. **Volver a la raíz y correr el driver**  
+
+4. **Ejecutar análisis**  
    ```bash
-  cd ..
-  python3 program/Driver.py program/program.cps
+   python3 program/Driver.py program/program.cps
    ```
+
+### IDE Web con Streamlit
+
+1. **Construir imagen** (si no se ha hecho)  
+   ```bash
+   docker build -t cps-analyzer .
+   ```
+
+2. **Ejecutar IDE web**  
+   ```bash
+   # Linux/Mac:
+   docker run --rm -p 8501:8501 -v "$(pwd)":/work -w /work cps-analyzer streamlit run src/ide/ide.py --server.address 0.0.0.0
+   
+   # Windows (Git Bash/MSYS2):
+   MSYS_NO_PATHCONV=1 docker run --rm -p 8501:8501 -v "C:\ruta\completa\al\proyecto":/work -w /work cps-analyzer streamlit run src/ide/ide.py --server.address 0.0.0.0
+   ```
+
+3. **Abrir el IDE en el navegador**  
+   Visitar: http://localhost:8501
+
+   **Características del IDE:**
+   - Cargar archivos `.cps` desde el sistema o ejemplos incluidos
+   - Editor de código con resaltado de sintaxis
+   - Compilación en tiempo real con botón "Compile & Analyze"
+   - Panel de errores de sintaxis (ANTLR)
+   - Panel de errores semánticos (análisis de tipos)
 
 ---
