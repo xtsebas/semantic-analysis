@@ -52,3 +52,46 @@ def test_unary_error():
         print(+"hola");
     """)
     assert len(issues) >= 2
+
+def test_redeclaration_same_scope_error():
+    issues = run_semantic_on("""
+        let x: integer = 1;
+        let x: integer = 2;
+    """)
+    assert any("redeclarado" in i.message for i in issues)
+
+def test_shadowing_in_inner_block_ok():
+    issues = run_semantic_on("""
+        let x: integer = 1;
+        {
+            let x: integer = 2;
+            print(x + 1);
+        }
+        print(x + 1);
+    """)
+    assert not issues
+
+def test_undeclared_use_error():
+    issues = run_semantic_on("""
+        print(y);
+    """)
+    assert any("no declarada" in i.message for i in issues)
+
+def test_const_requires_no_reassignment_and_type_check():
+    issues = run_semantic_on("""
+        const PI: integer = 3;
+        PI = 4;                // no se puede
+        let r: string = "a";
+        r = 10;                // tipo incompatible
+    """)
+    assert any("No se puede asignar a constante" in i.message for i in issues) \
+        and any("Tipo incompatible en asignación" in i.message for i in issues)
+
+def test_var_inference_matches_initializer():
+    issues = run_semantic_on("""
+        let a = 1;
+        a = 2;
+        a = "hola"; // incompatible
+    """)
+    assert any("Tipo incompatible en asignación" in i.message for i in issues)
+

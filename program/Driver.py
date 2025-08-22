@@ -39,7 +39,7 @@ def main():
             print(f"  línea {e.line}, col {e.column}: {e.message}", file=sys.stderr)
         sys.exit(1)
 
-    # 3) Pasada semántica (Parte 1: aritmético y lógico)
+    # 3) Pasada semántica
     visitor = SemanticVisitor()
     _ = result.tree.accept(visitor)
 
@@ -48,6 +48,12 @@ def main():
         for e in visitor.issues:
             print(f"  línea {e.line}, col {e.column}: {e.message}", file=sys.stderr)
         sys.exit(1)
+
+    # --- dump opcional de la tabla de símbolos ---
+    for line in visitor.symtab.export_as_lines():
+        print(line)
+    # ---------------------------------------------
+
 
     # 4) (Opcional) imprimir el árbol si no hay errores y no está --quiet
     if not args.quiet:
