@@ -169,43 +169,88 @@ class CompiscriptVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CompiscriptParser#logicalOrExpr.
-    def visitLogicalOrExpr(self, ctx:CompiscriptParser.LogicalOrExprContext):
+    # Visit a parse tree produced by CompiscriptParser#LogicalOrPassthrough.
+    def visitLogicalOrPassthrough(self, ctx:CompiscriptParser.LogicalOrPassthroughContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CompiscriptParser#logicalAndExpr.
-    def visitLogicalAndExpr(self, ctx:CompiscriptParser.LogicalAndExprContext):
+    # Visit a parse tree produced by CompiscriptParser#LogicalOrOp.
+    def visitLogicalOrOp(self, ctx:CompiscriptParser.LogicalOrOpContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CompiscriptParser#equalityExpr.
-    def visitEqualityExpr(self, ctx:CompiscriptParser.EqualityExprContext):
+    # Visit a parse tree produced by CompiscriptParser#LogicalAndPassthrough.
+    def visitLogicalAndPassthrough(self, ctx:CompiscriptParser.LogicalAndPassthroughContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CompiscriptParser#relationalExpr.
-    def visitRelationalExpr(self, ctx:CompiscriptParser.RelationalExprContext):
+    # Visit a parse tree produced by CompiscriptParser#LogicalAndOp.
+    def visitLogicalAndOp(self, ctx:CompiscriptParser.LogicalAndOpContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CompiscriptParser#additiveExpr.
-    def visitAdditiveExpr(self, ctx:CompiscriptParser.AdditiveExprContext):
+    # Visit a parse tree produced by CompiscriptParser#EqualityPassthrough.
+    def visitEqualityPassthrough(self, ctx:CompiscriptParser.EqualityPassthroughContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CompiscriptParser#multiplicativeExpr.
-    def visitMultiplicativeExpr(self, ctx:CompiscriptParser.MultiplicativeExprContext):
+    # Visit a parse tree produced by CompiscriptParser#EqualityOp.
+    def visitEqualityOp(self, ctx:CompiscriptParser.EqualityOpContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CompiscriptParser#unaryExpr.
-    def visitUnaryExpr(self, ctx:CompiscriptParser.UnaryExprContext):
+    # Visit a parse tree produced by CompiscriptParser#RelationalPassthrough.
+    def visitRelationalPassthrough(self, ctx:CompiscriptParser.RelationalPassthroughContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CompiscriptParser#primaryExpr.
-    def visitPrimaryExpr(self, ctx:CompiscriptParser.PrimaryExprContext):
+    # Visit a parse tree produced by CompiscriptParser#RelationalOp.
+    def visitRelationalOp(self, ctx:CompiscriptParser.RelationalOpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#AdditiveOp.
+    def visitAdditiveOp(self, ctx:CompiscriptParser.AdditiveOpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#AdditivePassthrough.
+    def visitAdditivePassthrough(self, ctx:CompiscriptParser.AdditivePassthroughContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#MultiplicativePassthrough.
+    def visitMultiplicativePassthrough(self, ctx:CompiscriptParser.MultiplicativePassthroughContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#MultiplicativeOp.
+    def visitMultiplicativeOp(self, ctx:CompiscriptParser.MultiplicativeOpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#UnaryOp.
+    def visitUnaryOp(self, ctx:CompiscriptParser.UnaryOpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#UnaryPassthrough.
+    def visitUnaryPassthrough(self, ctx:CompiscriptParser.UnaryPassthroughContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#LiteralPrimary.
+    def visitLiteralPrimary(self, ctx:CompiscriptParser.LiteralPrimaryContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#LeftHandSidePrimary.
+    def visitLeftHandSidePrimary(self, ctx:CompiscriptParser.LeftHandSidePrimaryContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CompiscriptParser#ParenthesizedExpr.
+    def visitParenthesizedExpr(self, ctx:CompiscriptParser.ParenthesizedExprContext):
         return self.visitChildren(ctx)
 
 

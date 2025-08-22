@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,62,478,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,62,496,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
@@ -37,150 +37,156 @@ def serializedATN():
         25,1,25,3,25,309,8,25,1,25,1,25,5,25,313,8,25,10,25,12,25,316,9,
         25,1,25,1,25,1,26,1,26,1,26,3,26,323,8,26,1,27,1,27,1,28,1,28,1,
         28,1,28,1,28,1,28,1,28,1,28,1,28,1,28,1,28,3,28,338,8,28,1,29,1,
-        29,1,29,1,29,1,29,1,29,3,29,346,8,29,1,30,1,30,1,30,5,30,351,8,30,
-        10,30,12,30,354,9,30,1,31,1,31,1,31,5,31,359,8,31,10,31,12,31,362,
-        9,31,1,32,1,32,1,32,5,32,367,8,32,10,32,12,32,370,9,32,1,33,1,33,
-        1,33,5,33,375,8,33,10,33,12,33,378,9,33,1,34,1,34,1,34,5,34,383,
-        8,34,10,34,12,34,386,9,34,1,35,1,35,1,35,5,35,391,8,35,10,35,12,
-        35,394,9,35,1,36,1,36,1,36,3,36,399,8,36,1,37,1,37,1,37,1,37,1,37,
-        1,37,3,37,407,8,37,1,38,1,38,1,38,1,38,1,38,3,38,414,8,38,1,39,1,
-        39,5,39,418,8,39,10,39,12,39,421,9,39,1,40,1,40,1,40,1,40,1,40,3,
-        40,428,8,40,1,40,1,40,3,40,432,8,40,1,41,1,41,3,41,436,8,41,1,41,
-        1,41,1,41,1,41,1,41,1,41,1,41,3,41,445,8,41,1,42,1,42,1,42,5,42,
-        450,8,42,10,42,12,42,453,9,42,1,43,1,43,1,43,1,43,5,43,459,8,43,
-        10,43,12,43,462,9,43,3,43,464,8,43,1,43,1,43,1,44,1,44,1,44,5,44,
-        471,8,44,10,44,12,44,474,9,44,1,45,1,45,1,45,0,0,46,0,2,4,6,8,10,
-        12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,
-        56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,0,7,1,0,3,
-        4,1,0,34,35,1,0,36,39,1,0,40,41,1,0,42,44,2,0,41,41,45,45,2,0,53,
-        55,59,59,499,0,95,1,0,0,0,2,118,1,0,0,0,4,120,1,0,0,0,6,129,1,0,
-        0,0,8,139,1,0,0,0,10,148,1,0,0,0,12,151,1,0,0,0,14,166,1,0,0,0,16,
-        168,1,0,0,0,18,171,1,0,0,0,20,177,1,0,0,0,22,186,1,0,0,0,24,192,
-        1,0,0,0,26,200,1,0,0,0,28,217,1,0,0,0,30,225,1,0,0,0,32,228,1,0,
-        0,0,34,231,1,0,0,0,36,237,1,0,0,0,38,245,1,0,0,0,40,261,1,0,0,0,
-        42,270,1,0,0,0,44,278,1,0,0,0,46,291,1,0,0,0,48,299,1,0,0,0,50,304,
-        1,0,0,0,52,322,1,0,0,0,54,324,1,0,0,0,56,337,1,0,0,0,58,339,1,0,
-        0,0,60,347,1,0,0,0,62,355,1,0,0,0,64,363,1,0,0,0,66,371,1,0,0,0,
-        68,379,1,0,0,0,70,387,1,0,0,0,72,398,1,0,0,0,74,406,1,0,0,0,76,413,
-        1,0,0,0,78,415,1,0,0,0,80,431,1,0,0,0,82,444,1,0,0,0,84,446,1,0,
-        0,0,86,454,1,0,0,0,88,467,1,0,0,0,90,475,1,0,0,0,92,94,3,2,1,0,93,
-        92,1,0,0,0,94,97,1,0,0,0,95,93,1,0,0,0,95,96,1,0,0,0,96,98,1,0,0,
-        0,97,95,1,0,0,0,98,99,5,0,0,1,99,1,1,0,0,0,100,119,3,6,3,0,101,119,
-        3,8,4,0,102,119,3,14,7,0,103,119,3,44,22,0,104,119,3,50,25,0,105,
-        119,3,16,8,0,106,119,3,18,9,0,107,119,3,4,2,0,108,119,3,20,10,0,
-        109,119,3,22,11,0,110,119,3,24,12,0,111,119,3,26,13,0,112,119,3,
-        28,14,0,113,119,3,36,18,0,114,119,3,38,19,0,115,119,3,30,15,0,116,
-        119,3,32,16,0,117,119,3,34,17,0,118,100,1,0,0,0,118,101,1,0,0,0,
-        118,102,1,0,0,0,118,103,1,0,0,0,118,104,1,0,0,0,118,105,1,0,0,0,
-        118,106,1,0,0,0,118,107,1,0,0,0,118,108,1,0,0,0,118,109,1,0,0,0,
-        118,110,1,0,0,0,118,111,1,0,0,0,118,112,1,0,0,0,118,113,1,0,0,0,
-        118,114,1,0,0,0,118,115,1,0,0,0,118,116,1,0,0,0,118,117,1,0,0,0,
-        119,3,1,0,0,0,120,124,5,1,0,0,121,123,3,2,1,0,122,121,1,0,0,0,123,
-        126,1,0,0,0,124,122,1,0,0,0,124,125,1,0,0,0,125,127,1,0,0,0,126,
-        124,1,0,0,0,127,128,5,2,0,0,128,5,1,0,0,0,129,130,7,0,0,0,130,132,
-        5,59,0,0,131,133,3,10,5,0,132,131,1,0,0,0,132,133,1,0,0,0,133,135,
-        1,0,0,0,134,136,3,12,6,0,135,134,1,0,0,0,135,136,1,0,0,0,136,137,
-        1,0,0,0,137,138,5,5,0,0,138,7,1,0,0,0,139,140,5,6,0,0,140,142,5,
-        59,0,0,141,143,3,10,5,0,142,141,1,0,0,0,142,143,1,0,0,0,143,144,
-        1,0,0,0,144,145,5,7,0,0,145,146,3,54,27,0,146,147,5,5,0,0,147,9,
-        1,0,0,0,148,149,5,8,0,0,149,150,3,88,44,0,150,11,1,0,0,0,151,152,
-        5,7,0,0,152,153,3,54,27,0,153,13,1,0,0,0,154,155,5,59,0,0,155,156,
-        5,7,0,0,156,157,3,54,27,0,157,158,5,5,0,0,158,167,1,0,0,0,159,160,
-        3,54,27,0,160,161,5,9,0,0,161,162,5,59,0,0,162,163,5,7,0,0,163,164,
-        3,54,27,0,164,165,5,5,0,0,165,167,1,0,0,0,166,154,1,0,0,0,166,159,
-        1,0,0,0,167,15,1,0,0,0,168,169,3,54,27,0,169,170,5,5,0,0,170,17,
-        1,0,0,0,171,172,5,10,0,0,172,173,5,11,0,0,173,174,3,54,27,0,174,
-        175,5,12,0,0,175,176,5,5,0,0,176,19,1,0,0,0,177,178,5,13,0,0,178,
-        179,5,11,0,0,179,180,3,54,27,0,180,181,5,12,0,0,181,184,3,4,2,0,
-        182,183,5,14,0,0,183,185,3,4,2,0,184,182,1,0,0,0,184,185,1,0,0,0,
-        185,21,1,0,0,0,186,187,5,15,0,0,187,188,5,11,0,0,188,189,3,54,27,
-        0,189,190,5,12,0,0,190,191,3,4,2,0,191,23,1,0,0,0,192,193,5,16,0,
-        0,193,194,3,4,2,0,194,195,5,15,0,0,195,196,5,11,0,0,196,197,3,54,
-        27,0,197,198,5,12,0,0,198,199,5,5,0,0,199,25,1,0,0,0,200,201,5,17,
-        0,0,201,205,5,11,0,0,202,206,3,6,3,0,203,206,3,14,7,0,204,206,5,
-        5,0,0,205,202,1,0,0,0,205,203,1,0,0,0,205,204,1,0,0,0,206,208,1,
-        0,0,0,207,209,3,54,27,0,208,207,1,0,0,0,208,209,1,0,0,0,209,210,
-        1,0,0,0,210,212,5,5,0,0,211,213,3,54,27,0,212,211,1,0,0,0,212,213,
-        1,0,0,0,213,214,1,0,0,0,214,215,5,12,0,0,215,216,3,4,2,0,216,27,
-        1,0,0,0,217,218,5,18,0,0,218,219,5,11,0,0,219,220,5,59,0,0,220,221,
-        5,19,0,0,221,222,3,54,27,0,222,223,5,12,0,0,223,224,3,4,2,0,224,
-        29,1,0,0,0,225,226,5,20,0,0,226,227,5,5,0,0,227,31,1,0,0,0,228,229,
-        5,21,0,0,229,230,5,5,0,0,230,33,1,0,0,0,231,233,5,22,0,0,232,234,
-        3,54,27,0,233,232,1,0,0,0,233,234,1,0,0,0,234,235,1,0,0,0,235,236,
-        5,5,0,0,236,35,1,0,0,0,237,238,5,23,0,0,238,239,3,4,2,0,239,240,
-        5,24,0,0,240,241,5,11,0,0,241,242,5,59,0,0,242,243,5,12,0,0,243,
-        244,3,4,2,0,244,37,1,0,0,0,245,246,5,25,0,0,246,247,5,11,0,0,247,
-        248,3,54,27,0,248,249,5,12,0,0,249,253,5,1,0,0,250,252,3,40,20,0,
-        251,250,1,0,0,0,252,255,1,0,0,0,253,251,1,0,0,0,253,254,1,0,0,0,
-        254,257,1,0,0,0,255,253,1,0,0,0,256,258,3,42,21,0,257,256,1,0,0,
-        0,257,258,1,0,0,0,258,259,1,0,0,0,259,260,5,2,0,0,260,39,1,0,0,0,
-        261,262,5,26,0,0,262,263,3,54,27,0,263,267,5,8,0,0,264,266,3,2,1,
-        0,265,264,1,0,0,0,266,269,1,0,0,0,267,265,1,0,0,0,267,268,1,0,0,
-        0,268,41,1,0,0,0,269,267,1,0,0,0,270,271,5,27,0,0,271,275,5,8,0,
-        0,272,274,3,2,1,0,273,272,1,0,0,0,274,277,1,0,0,0,275,273,1,0,0,
-        0,275,276,1,0,0,0,276,43,1,0,0,0,277,275,1,0,0,0,278,279,5,28,0,
-        0,279,280,5,59,0,0,280,282,5,11,0,0,281,283,3,46,23,0,282,281,1,
-        0,0,0,282,283,1,0,0,0,283,284,1,0,0,0,284,287,5,12,0,0,285,286,5,
-        8,0,0,286,288,3,88,44,0,287,285,1,0,0,0,287,288,1,0,0,0,288,289,
-        1,0,0,0,289,290,3,4,2,0,290,45,1,0,0,0,291,296,3,48,24,0,292,293,
-        5,29,0,0,293,295,3,48,24,0,294,292,1,0,0,0,295,298,1,0,0,0,296,294,
-        1,0,0,0,296,297,1,0,0,0,297,47,1,0,0,0,298,296,1,0,0,0,299,302,5,
-        59,0,0,300,301,5,8,0,0,301,303,3,88,44,0,302,300,1,0,0,0,302,303,
-        1,0,0,0,303,49,1,0,0,0,304,305,5,30,0,0,305,308,5,59,0,0,306,307,
-        5,8,0,0,307,309,5,59,0,0,308,306,1,0,0,0,308,309,1,0,0,0,309,310,
-        1,0,0,0,310,314,5,1,0,0,311,313,3,52,26,0,312,311,1,0,0,0,313,316,
-        1,0,0,0,314,312,1,0,0,0,314,315,1,0,0,0,315,317,1,0,0,0,316,314,
-        1,0,0,0,317,318,5,2,0,0,318,51,1,0,0,0,319,323,3,44,22,0,320,323,
-        3,6,3,0,321,323,3,8,4,0,322,319,1,0,0,0,322,320,1,0,0,0,322,321,
-        1,0,0,0,323,53,1,0,0,0,324,325,3,56,28,0,325,55,1,0,0,0,326,327,
-        3,78,39,0,327,328,5,7,0,0,328,329,3,56,28,0,329,338,1,0,0,0,330,
-        331,3,78,39,0,331,332,5,9,0,0,332,333,5,59,0,0,333,334,5,7,0,0,334,
-        335,3,56,28,0,335,338,1,0,0,0,336,338,3,58,29,0,337,326,1,0,0,0,
-        337,330,1,0,0,0,337,336,1,0,0,0,338,57,1,0,0,0,339,345,3,60,30,0,
-        340,341,5,31,0,0,341,342,3,54,27,0,342,343,5,8,0,0,343,344,3,54,
-        27,0,344,346,1,0,0,0,345,340,1,0,0,0,345,346,1,0,0,0,346,59,1,0,
-        0,0,347,352,3,62,31,0,348,349,5,32,0,0,349,351,3,62,31,0,350,348,
-        1,0,0,0,351,354,1,0,0,0,352,350,1,0,0,0,352,353,1,0,0,0,353,61,1,
-        0,0,0,354,352,1,0,0,0,355,360,3,64,32,0,356,357,5,33,0,0,357,359,
-        3,64,32,0,358,356,1,0,0,0,359,362,1,0,0,0,360,358,1,0,0,0,360,361,
-        1,0,0,0,361,63,1,0,0,0,362,360,1,0,0,0,363,368,3,66,33,0,364,365,
-        7,1,0,0,365,367,3,66,33,0,366,364,1,0,0,0,367,370,1,0,0,0,368,366,
-        1,0,0,0,368,369,1,0,0,0,369,65,1,0,0,0,370,368,1,0,0,0,371,376,3,
-        68,34,0,372,373,7,2,0,0,373,375,3,68,34,0,374,372,1,0,0,0,375,378,
-        1,0,0,0,376,374,1,0,0,0,376,377,1,0,0,0,377,67,1,0,0,0,378,376,1,
-        0,0,0,379,384,3,70,35,0,380,381,7,3,0,0,381,383,3,70,35,0,382,380,
-        1,0,0,0,383,386,1,0,0,0,384,382,1,0,0,0,384,385,1,0,0,0,385,69,1,
-        0,0,0,386,384,1,0,0,0,387,392,3,72,36,0,388,389,7,4,0,0,389,391,
-        3,72,36,0,390,388,1,0,0,0,391,394,1,0,0,0,392,390,1,0,0,0,392,393,
-        1,0,0,0,393,71,1,0,0,0,394,392,1,0,0,0,395,396,7,5,0,0,396,399,3,
-        72,36,0,397,399,3,74,37,0,398,395,1,0,0,0,398,397,1,0,0,0,399,73,
-        1,0,0,0,400,407,3,76,38,0,401,407,3,78,39,0,402,403,5,11,0,0,403,
-        404,3,54,27,0,404,405,5,12,0,0,405,407,1,0,0,0,406,400,1,0,0,0,406,
-        401,1,0,0,0,406,402,1,0,0,0,407,75,1,0,0,0,408,414,5,56,0,0,409,
-        414,3,86,43,0,410,414,5,46,0,0,411,414,5,47,0,0,412,414,5,48,0,0,
-        413,408,1,0,0,0,413,409,1,0,0,0,413,410,1,0,0,0,413,411,1,0,0,0,
-        413,412,1,0,0,0,414,77,1,0,0,0,415,419,3,80,40,0,416,418,3,82,41,
-        0,417,416,1,0,0,0,418,421,1,0,0,0,419,417,1,0,0,0,419,420,1,0,0,
-        0,420,79,1,0,0,0,421,419,1,0,0,0,422,432,5,59,0,0,423,424,5,49,0,
-        0,424,425,5,59,0,0,425,427,5,11,0,0,426,428,3,84,42,0,427,426,1,
-        0,0,0,427,428,1,0,0,0,428,429,1,0,0,0,429,432,5,12,0,0,430,432,5,
-        50,0,0,431,422,1,0,0,0,431,423,1,0,0,0,431,430,1,0,0,0,432,81,1,
-        0,0,0,433,435,5,11,0,0,434,436,3,84,42,0,435,434,1,0,0,0,435,436,
-        1,0,0,0,436,437,1,0,0,0,437,445,5,12,0,0,438,439,5,51,0,0,439,440,
-        3,54,27,0,440,441,5,52,0,0,441,445,1,0,0,0,442,443,5,9,0,0,443,445,
-        5,59,0,0,444,433,1,0,0,0,444,438,1,0,0,0,444,442,1,0,0,0,445,83,
-        1,0,0,0,446,451,3,54,27,0,447,448,5,29,0,0,448,450,3,54,27,0,449,
-        447,1,0,0,0,450,453,1,0,0,0,451,449,1,0,0,0,451,452,1,0,0,0,452,
-        85,1,0,0,0,453,451,1,0,0,0,454,463,5,51,0,0,455,460,3,54,27,0,456,
-        457,5,29,0,0,457,459,3,54,27,0,458,456,1,0,0,0,459,462,1,0,0,0,460,
-        458,1,0,0,0,460,461,1,0,0,0,461,464,1,0,0,0,462,460,1,0,0,0,463,
-        455,1,0,0,0,463,464,1,0,0,0,464,465,1,0,0,0,465,466,5,52,0,0,466,
-        87,1,0,0,0,467,472,3,90,45,0,468,469,5,51,0,0,469,471,5,52,0,0,470,
-        468,1,0,0,0,471,474,1,0,0,0,472,470,1,0,0,0,472,473,1,0,0,0,473,
-        89,1,0,0,0,474,472,1,0,0,0,475,476,7,6,0,0,476,91,1,0,0,0,43,95,
-        118,124,132,135,142,166,184,205,208,212,233,253,257,267,275,282,
-        287,296,302,308,314,322,337,345,352,360,368,376,384,392,398,406,
-        413,419,427,431,435,444,451,460,463,472
+        29,1,29,1,29,1,29,1,29,3,29,346,8,29,1,30,1,30,1,30,1,30,1,30,1,
+        30,5,30,354,8,30,10,30,12,30,357,9,30,1,31,1,31,1,31,1,31,1,31,1,
+        31,5,31,365,8,31,10,31,12,31,368,9,31,1,32,1,32,1,32,1,32,1,32,1,
+        32,5,32,376,8,32,10,32,12,32,379,9,32,1,33,1,33,1,33,1,33,1,33,1,
+        33,5,33,387,8,33,10,33,12,33,390,9,33,1,34,1,34,1,34,1,34,1,34,1,
+        34,5,34,398,8,34,10,34,12,34,401,9,34,1,35,1,35,1,35,1,35,1,35,1,
+        35,5,35,409,8,35,10,35,12,35,412,9,35,1,36,1,36,1,36,3,36,417,8,
+        36,1,37,1,37,1,37,1,37,1,37,1,37,3,37,425,8,37,1,38,1,38,1,38,1,
+        38,1,38,3,38,432,8,38,1,39,1,39,5,39,436,8,39,10,39,12,39,439,9,
+        39,1,40,1,40,1,40,1,40,1,40,3,40,446,8,40,1,40,1,40,3,40,450,8,40,
+        1,41,1,41,3,41,454,8,41,1,41,1,41,1,41,1,41,1,41,1,41,1,41,3,41,
+        463,8,41,1,42,1,42,1,42,5,42,468,8,42,10,42,12,42,471,9,42,1,43,
+        1,43,1,43,1,43,5,43,477,8,43,10,43,12,43,480,9,43,3,43,482,8,43,
+        1,43,1,43,1,44,1,44,1,44,5,44,489,8,44,10,44,12,44,492,9,44,1,45,
+        1,45,1,45,0,6,60,62,64,66,68,70,46,0,2,4,6,8,10,12,14,16,18,20,22,
+        24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,
+        68,70,72,74,76,78,80,82,84,86,88,90,0,7,1,0,3,4,1,0,34,35,1,0,36,
+        39,1,0,40,41,1,0,42,44,2,0,41,41,45,45,2,0,53,55,59,59,517,0,95,
+        1,0,0,0,2,118,1,0,0,0,4,120,1,0,0,0,6,129,1,0,0,0,8,139,1,0,0,0,
+        10,148,1,0,0,0,12,151,1,0,0,0,14,166,1,0,0,0,16,168,1,0,0,0,18,171,
+        1,0,0,0,20,177,1,0,0,0,22,186,1,0,0,0,24,192,1,0,0,0,26,200,1,0,
+        0,0,28,217,1,0,0,0,30,225,1,0,0,0,32,228,1,0,0,0,34,231,1,0,0,0,
+        36,237,1,0,0,0,38,245,1,0,0,0,40,261,1,0,0,0,42,270,1,0,0,0,44,278,
+        1,0,0,0,46,291,1,0,0,0,48,299,1,0,0,0,50,304,1,0,0,0,52,322,1,0,
+        0,0,54,324,1,0,0,0,56,337,1,0,0,0,58,339,1,0,0,0,60,347,1,0,0,0,
+        62,358,1,0,0,0,64,369,1,0,0,0,66,380,1,0,0,0,68,391,1,0,0,0,70,402,
+        1,0,0,0,72,416,1,0,0,0,74,424,1,0,0,0,76,431,1,0,0,0,78,433,1,0,
+        0,0,80,449,1,0,0,0,82,462,1,0,0,0,84,464,1,0,0,0,86,472,1,0,0,0,
+        88,485,1,0,0,0,90,493,1,0,0,0,92,94,3,2,1,0,93,92,1,0,0,0,94,97,
+        1,0,0,0,95,93,1,0,0,0,95,96,1,0,0,0,96,98,1,0,0,0,97,95,1,0,0,0,
+        98,99,5,0,0,1,99,1,1,0,0,0,100,119,3,6,3,0,101,119,3,8,4,0,102,119,
+        3,14,7,0,103,119,3,44,22,0,104,119,3,50,25,0,105,119,3,16,8,0,106,
+        119,3,18,9,0,107,119,3,4,2,0,108,119,3,20,10,0,109,119,3,22,11,0,
+        110,119,3,24,12,0,111,119,3,26,13,0,112,119,3,28,14,0,113,119,3,
+        36,18,0,114,119,3,38,19,0,115,119,3,30,15,0,116,119,3,32,16,0,117,
+        119,3,34,17,0,118,100,1,0,0,0,118,101,1,0,0,0,118,102,1,0,0,0,118,
+        103,1,0,0,0,118,104,1,0,0,0,118,105,1,0,0,0,118,106,1,0,0,0,118,
+        107,1,0,0,0,118,108,1,0,0,0,118,109,1,0,0,0,118,110,1,0,0,0,118,
+        111,1,0,0,0,118,112,1,0,0,0,118,113,1,0,0,0,118,114,1,0,0,0,118,
+        115,1,0,0,0,118,116,1,0,0,0,118,117,1,0,0,0,119,3,1,0,0,0,120,124,
+        5,1,0,0,121,123,3,2,1,0,122,121,1,0,0,0,123,126,1,0,0,0,124,122,
+        1,0,0,0,124,125,1,0,0,0,125,127,1,0,0,0,126,124,1,0,0,0,127,128,
+        5,2,0,0,128,5,1,0,0,0,129,130,7,0,0,0,130,132,5,59,0,0,131,133,3,
+        10,5,0,132,131,1,0,0,0,132,133,1,0,0,0,133,135,1,0,0,0,134,136,3,
+        12,6,0,135,134,1,0,0,0,135,136,1,0,0,0,136,137,1,0,0,0,137,138,5,
+        5,0,0,138,7,1,0,0,0,139,140,5,6,0,0,140,142,5,59,0,0,141,143,3,10,
+        5,0,142,141,1,0,0,0,142,143,1,0,0,0,143,144,1,0,0,0,144,145,5,7,
+        0,0,145,146,3,54,27,0,146,147,5,5,0,0,147,9,1,0,0,0,148,149,5,8,
+        0,0,149,150,3,88,44,0,150,11,1,0,0,0,151,152,5,7,0,0,152,153,3,54,
+        27,0,153,13,1,0,0,0,154,155,5,59,0,0,155,156,5,7,0,0,156,157,3,54,
+        27,0,157,158,5,5,0,0,158,167,1,0,0,0,159,160,3,54,27,0,160,161,5,
+        9,0,0,161,162,5,59,0,0,162,163,5,7,0,0,163,164,3,54,27,0,164,165,
+        5,5,0,0,165,167,1,0,0,0,166,154,1,0,0,0,166,159,1,0,0,0,167,15,1,
+        0,0,0,168,169,3,54,27,0,169,170,5,5,0,0,170,17,1,0,0,0,171,172,5,
+        10,0,0,172,173,5,11,0,0,173,174,3,54,27,0,174,175,5,12,0,0,175,176,
+        5,5,0,0,176,19,1,0,0,0,177,178,5,13,0,0,178,179,5,11,0,0,179,180,
+        3,54,27,0,180,181,5,12,0,0,181,184,3,4,2,0,182,183,5,14,0,0,183,
+        185,3,4,2,0,184,182,1,0,0,0,184,185,1,0,0,0,185,21,1,0,0,0,186,187,
+        5,15,0,0,187,188,5,11,0,0,188,189,3,54,27,0,189,190,5,12,0,0,190,
+        191,3,4,2,0,191,23,1,0,0,0,192,193,5,16,0,0,193,194,3,4,2,0,194,
+        195,5,15,0,0,195,196,5,11,0,0,196,197,3,54,27,0,197,198,5,12,0,0,
+        198,199,5,5,0,0,199,25,1,0,0,0,200,201,5,17,0,0,201,205,5,11,0,0,
+        202,206,3,6,3,0,203,206,3,14,7,0,204,206,5,5,0,0,205,202,1,0,0,0,
+        205,203,1,0,0,0,205,204,1,0,0,0,206,208,1,0,0,0,207,209,3,54,27,
+        0,208,207,1,0,0,0,208,209,1,0,0,0,209,210,1,0,0,0,210,212,5,5,0,
+        0,211,213,3,54,27,0,212,211,1,0,0,0,212,213,1,0,0,0,213,214,1,0,
+        0,0,214,215,5,12,0,0,215,216,3,4,2,0,216,27,1,0,0,0,217,218,5,18,
+        0,0,218,219,5,11,0,0,219,220,5,59,0,0,220,221,5,19,0,0,221,222,3,
+        54,27,0,222,223,5,12,0,0,223,224,3,4,2,0,224,29,1,0,0,0,225,226,
+        5,20,0,0,226,227,5,5,0,0,227,31,1,0,0,0,228,229,5,21,0,0,229,230,
+        5,5,0,0,230,33,1,0,0,0,231,233,5,22,0,0,232,234,3,54,27,0,233,232,
+        1,0,0,0,233,234,1,0,0,0,234,235,1,0,0,0,235,236,5,5,0,0,236,35,1,
+        0,0,0,237,238,5,23,0,0,238,239,3,4,2,0,239,240,5,24,0,0,240,241,
+        5,11,0,0,241,242,5,59,0,0,242,243,5,12,0,0,243,244,3,4,2,0,244,37,
+        1,0,0,0,245,246,5,25,0,0,246,247,5,11,0,0,247,248,3,54,27,0,248,
+        249,5,12,0,0,249,253,5,1,0,0,250,252,3,40,20,0,251,250,1,0,0,0,252,
+        255,1,0,0,0,253,251,1,0,0,0,253,254,1,0,0,0,254,257,1,0,0,0,255,
+        253,1,0,0,0,256,258,3,42,21,0,257,256,1,0,0,0,257,258,1,0,0,0,258,
+        259,1,0,0,0,259,260,5,2,0,0,260,39,1,0,0,0,261,262,5,26,0,0,262,
+        263,3,54,27,0,263,267,5,8,0,0,264,266,3,2,1,0,265,264,1,0,0,0,266,
+        269,1,0,0,0,267,265,1,0,0,0,267,268,1,0,0,0,268,41,1,0,0,0,269,267,
+        1,0,0,0,270,271,5,27,0,0,271,275,5,8,0,0,272,274,3,2,1,0,273,272,
+        1,0,0,0,274,277,1,0,0,0,275,273,1,0,0,0,275,276,1,0,0,0,276,43,1,
+        0,0,0,277,275,1,0,0,0,278,279,5,28,0,0,279,280,5,59,0,0,280,282,
+        5,11,0,0,281,283,3,46,23,0,282,281,1,0,0,0,282,283,1,0,0,0,283,284,
+        1,0,0,0,284,287,5,12,0,0,285,286,5,8,0,0,286,288,3,88,44,0,287,285,
+        1,0,0,0,287,288,1,0,0,0,288,289,1,0,0,0,289,290,3,4,2,0,290,45,1,
+        0,0,0,291,296,3,48,24,0,292,293,5,29,0,0,293,295,3,48,24,0,294,292,
+        1,0,0,0,295,298,1,0,0,0,296,294,1,0,0,0,296,297,1,0,0,0,297,47,1,
+        0,0,0,298,296,1,0,0,0,299,302,5,59,0,0,300,301,5,8,0,0,301,303,3,
+        88,44,0,302,300,1,0,0,0,302,303,1,0,0,0,303,49,1,0,0,0,304,305,5,
+        30,0,0,305,308,5,59,0,0,306,307,5,8,0,0,307,309,5,59,0,0,308,306,
+        1,0,0,0,308,309,1,0,0,0,309,310,1,0,0,0,310,314,5,1,0,0,311,313,
+        3,52,26,0,312,311,1,0,0,0,313,316,1,0,0,0,314,312,1,0,0,0,314,315,
+        1,0,0,0,315,317,1,0,0,0,316,314,1,0,0,0,317,318,5,2,0,0,318,51,1,
+        0,0,0,319,323,3,44,22,0,320,323,3,6,3,0,321,323,3,8,4,0,322,319,
+        1,0,0,0,322,320,1,0,0,0,322,321,1,0,0,0,323,53,1,0,0,0,324,325,3,
+        56,28,0,325,55,1,0,0,0,326,327,3,78,39,0,327,328,5,7,0,0,328,329,
+        3,56,28,0,329,338,1,0,0,0,330,331,3,78,39,0,331,332,5,9,0,0,332,
+        333,5,59,0,0,333,334,5,7,0,0,334,335,3,56,28,0,335,338,1,0,0,0,336,
+        338,3,58,29,0,337,326,1,0,0,0,337,330,1,0,0,0,337,336,1,0,0,0,338,
+        57,1,0,0,0,339,345,3,60,30,0,340,341,5,31,0,0,341,342,3,54,27,0,
+        342,343,5,8,0,0,343,344,3,54,27,0,344,346,1,0,0,0,345,340,1,0,0,
+        0,345,346,1,0,0,0,346,59,1,0,0,0,347,348,6,30,-1,0,348,349,3,62,
+        31,0,349,355,1,0,0,0,350,351,10,2,0,0,351,352,5,32,0,0,352,354,3,
+        62,31,0,353,350,1,0,0,0,354,357,1,0,0,0,355,353,1,0,0,0,355,356,
+        1,0,0,0,356,61,1,0,0,0,357,355,1,0,0,0,358,359,6,31,-1,0,359,360,
+        3,64,32,0,360,366,1,0,0,0,361,362,10,2,0,0,362,363,5,33,0,0,363,
+        365,3,64,32,0,364,361,1,0,0,0,365,368,1,0,0,0,366,364,1,0,0,0,366,
+        367,1,0,0,0,367,63,1,0,0,0,368,366,1,0,0,0,369,370,6,32,-1,0,370,
+        371,3,66,33,0,371,377,1,0,0,0,372,373,10,2,0,0,373,374,7,1,0,0,374,
+        376,3,66,33,0,375,372,1,0,0,0,376,379,1,0,0,0,377,375,1,0,0,0,377,
+        378,1,0,0,0,378,65,1,0,0,0,379,377,1,0,0,0,380,381,6,33,-1,0,381,
+        382,3,68,34,0,382,388,1,0,0,0,383,384,10,2,0,0,384,385,7,2,0,0,385,
+        387,3,68,34,0,386,383,1,0,0,0,387,390,1,0,0,0,388,386,1,0,0,0,388,
+        389,1,0,0,0,389,67,1,0,0,0,390,388,1,0,0,0,391,392,6,34,-1,0,392,
+        393,3,70,35,0,393,399,1,0,0,0,394,395,10,2,0,0,395,396,7,3,0,0,396,
+        398,3,70,35,0,397,394,1,0,0,0,398,401,1,0,0,0,399,397,1,0,0,0,399,
+        400,1,0,0,0,400,69,1,0,0,0,401,399,1,0,0,0,402,403,6,35,-1,0,403,
+        404,3,72,36,0,404,410,1,0,0,0,405,406,10,2,0,0,406,407,7,4,0,0,407,
+        409,3,72,36,0,408,405,1,0,0,0,409,412,1,0,0,0,410,408,1,0,0,0,410,
+        411,1,0,0,0,411,71,1,0,0,0,412,410,1,0,0,0,413,414,7,5,0,0,414,417,
+        3,72,36,0,415,417,3,74,37,0,416,413,1,0,0,0,416,415,1,0,0,0,417,
+        73,1,0,0,0,418,425,3,76,38,0,419,425,3,78,39,0,420,421,5,11,0,0,
+        421,422,3,54,27,0,422,423,5,12,0,0,423,425,1,0,0,0,424,418,1,0,0,
+        0,424,419,1,0,0,0,424,420,1,0,0,0,425,75,1,0,0,0,426,432,5,56,0,
+        0,427,432,3,86,43,0,428,432,5,46,0,0,429,432,5,47,0,0,430,432,5,
+        48,0,0,431,426,1,0,0,0,431,427,1,0,0,0,431,428,1,0,0,0,431,429,1,
+        0,0,0,431,430,1,0,0,0,432,77,1,0,0,0,433,437,3,80,40,0,434,436,3,
+        82,41,0,435,434,1,0,0,0,436,439,1,0,0,0,437,435,1,0,0,0,437,438,
+        1,0,0,0,438,79,1,0,0,0,439,437,1,0,0,0,440,450,5,59,0,0,441,442,
+        5,49,0,0,442,443,5,59,0,0,443,445,5,11,0,0,444,446,3,84,42,0,445,
+        444,1,0,0,0,445,446,1,0,0,0,446,447,1,0,0,0,447,450,5,12,0,0,448,
+        450,5,50,0,0,449,440,1,0,0,0,449,441,1,0,0,0,449,448,1,0,0,0,450,
+        81,1,0,0,0,451,453,5,11,0,0,452,454,3,84,42,0,453,452,1,0,0,0,453,
+        454,1,0,0,0,454,455,1,0,0,0,455,463,5,12,0,0,456,457,5,51,0,0,457,
+        458,3,54,27,0,458,459,5,52,0,0,459,463,1,0,0,0,460,461,5,9,0,0,461,
+        463,5,59,0,0,462,451,1,0,0,0,462,456,1,0,0,0,462,460,1,0,0,0,463,
+        83,1,0,0,0,464,469,3,54,27,0,465,466,5,29,0,0,466,468,3,54,27,0,
+        467,465,1,0,0,0,468,471,1,0,0,0,469,467,1,0,0,0,469,470,1,0,0,0,
+        470,85,1,0,0,0,471,469,1,0,0,0,472,481,5,51,0,0,473,478,3,54,27,
+        0,474,475,5,29,0,0,475,477,3,54,27,0,476,474,1,0,0,0,477,480,1,0,
+        0,0,478,476,1,0,0,0,478,479,1,0,0,0,479,482,1,0,0,0,480,478,1,0,
+        0,0,481,473,1,0,0,0,481,482,1,0,0,0,482,483,1,0,0,0,483,484,5,52,
+        0,0,484,87,1,0,0,0,485,490,3,90,45,0,486,487,5,51,0,0,487,489,5,
+        52,0,0,488,486,1,0,0,0,489,492,1,0,0,0,490,488,1,0,0,0,490,491,1,
+        0,0,0,491,89,1,0,0,0,492,490,1,0,0,0,493,494,7,6,0,0,494,91,1,0,
+        0,0,43,95,118,124,132,135,142,166,184,205,208,212,233,253,257,267,
+        275,282,287,296,302,308,314,322,337,345,355,366,377,388,399,410,
+        416,424,431,437,445,449,453,462,469,478,481,490
     ]
 
 class CompiscriptParser ( Parser ):
@@ -2337,7 +2343,7 @@ class CompiscriptParser ( Parser ):
             localctx = CompiscriptParser.TernaryExprContext(self, localctx)
             self.enterOuterAlt(localctx, 1)
             self.state = 339
-            self.logicalOrExpr()
+            self.logicalOrExpr(0)
             self.state = 345
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -2368,52 +2374,97 @@ class CompiscriptParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def logicalAndExpr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiscriptParser.LogicalAndExprContext)
-            else:
-                return self.getTypedRuleContext(CompiscriptParser.LogicalAndExprContext,i)
-
 
         def getRuleIndex(self):
             return CompiscriptParser.RULE_logicalOrExpr
 
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+    class LogicalOrPassthroughContext(LogicalOrExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.LogicalOrExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def logicalAndExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.LogicalAndExprContext,0)
+
+
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLogicalOrExpr" ):
-                return visitor.visitLogicalOrExpr(self)
+            if hasattr( visitor, "visitLogicalOrPassthrough" ):
+                return visitor.visitLogicalOrPassthrough(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class LogicalOrOpContext(LogicalOrExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.LogicalOrExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def logicalOrExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.LogicalOrExprContext,0)
+
+        def logicalAndExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.LogicalAndExprContext,0)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicalOrOp" ):
+                return visitor.visitLogicalOrOp(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-
-    def logicalOrExpr(self):
-
-        localctx = CompiscriptParser.LogicalOrExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 60, self.RULE_logicalOrExpr)
-        self._la = 0 # Token type
+    def logicalOrExpr(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiscriptParser.LogicalOrExprContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 60
+        self.enterRecursionRule(localctx, 60, self.RULE_logicalOrExpr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 347
-            self.logicalAndExpr()
-            self.state = 352
+            localctx = CompiscriptParser.LogicalOrPassthroughContext(self, localctx)
+            self._ctx = localctx
+            _prevctx = localctx
+
+            self.state = 348
+            self.logicalAndExpr(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 355
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==32:
-                self.state = 348
-                self.match(CompiscriptParser.T__31)
-                self.state = 349
-                self.logicalAndExpr()
-                self.state = 354
+            _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiscriptParser.LogicalOrOpContext(self, CompiscriptParser.LogicalOrExprContext(self, _parentctx, _parentState))
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_logicalOrExpr)
+                    self.state = 350
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 351
+                    self.match(CompiscriptParser.T__31)
+                    self.state = 352
+                    self.logicalAndExpr(0) 
+                self.state = 357
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
+                _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
             self._errHandler.recover(self, re)
         finally:
-            self.exitRule()
+            self.unrollRecursionContexts(_parentctx)
         return localctx
 
 
@@ -2424,52 +2475,97 @@ class CompiscriptParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def equalityExpr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiscriptParser.EqualityExprContext)
-            else:
-                return self.getTypedRuleContext(CompiscriptParser.EqualityExprContext,i)
-
 
         def getRuleIndex(self):
             return CompiscriptParser.RULE_logicalAndExpr
 
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+    class LogicalAndPassthroughContext(LogicalAndExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.LogicalAndExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def equalityExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.EqualityExprContext,0)
+
+
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLogicalAndExpr" ):
-                return visitor.visitLogicalAndExpr(self)
+            if hasattr( visitor, "visitLogicalAndPassthrough" ):
+                return visitor.visitLogicalAndPassthrough(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class LogicalAndOpContext(LogicalAndExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.LogicalAndExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def logicalAndExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.LogicalAndExprContext,0)
+
+        def equalityExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.EqualityExprContext,0)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicalAndOp" ):
+                return visitor.visitLogicalAndOp(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-
-    def logicalAndExpr(self):
-
-        localctx = CompiscriptParser.LogicalAndExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 62, self.RULE_logicalAndExpr)
-        self._la = 0 # Token type
+    def logicalAndExpr(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiscriptParser.LogicalAndExprContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 62
+        self.enterRecursionRule(localctx, 62, self.RULE_logicalAndExpr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 355
-            self.equalityExpr()
-            self.state = 360
+            localctx = CompiscriptParser.LogicalAndPassthroughContext(self, localctx)
+            self._ctx = localctx
+            _prevctx = localctx
+
+            self.state = 359
+            self.equalityExpr(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 366
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==33:
-                self.state = 356
-                self.match(CompiscriptParser.T__32)
-                self.state = 357
-                self.equalityExpr()
-                self.state = 362
+            _alt = self._interp.adaptivePredict(self._input,26,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiscriptParser.LogicalAndOpContext(self, CompiscriptParser.LogicalAndExprContext(self, _parentctx, _parentState))
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_logicalAndExpr)
+                    self.state = 361
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 362
+                    self.match(CompiscriptParser.T__32)
+                    self.state = 363
+                    self.equalityExpr(0) 
+                self.state = 368
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
+                _alt = self._interp.adaptivePredict(self._input,26,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
             self._errHandler.recover(self, re)
         finally:
-            self.exitRule()
+            self.unrollRecursionContexts(_parentctx)
         return localctx
 
 
@@ -2480,57 +2576,105 @@ class CompiscriptParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def relationalExpr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiscriptParser.RelationalExprContext)
-            else:
-                return self.getTypedRuleContext(CompiscriptParser.RelationalExprContext,i)
-
 
         def getRuleIndex(self):
             return CompiscriptParser.RULE_equalityExpr
 
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+    class EqualityPassthroughContext(EqualityExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.EqualityExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def relationalExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.RelationalExprContext,0)
+
+
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEqualityExpr" ):
-                return visitor.visitEqualityExpr(self)
+            if hasattr( visitor, "visitEqualityPassthrough" ):
+                return visitor.visitEqualityPassthrough(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class EqualityOpContext(EqualityExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.EqualityExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def equalityExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.EqualityExprContext,0)
+
+        def relationalExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.RelationalExprContext,0)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqualityOp" ):
+                return visitor.visitEqualityOp(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-
-    def equalityExpr(self):
-
-        localctx = CompiscriptParser.EqualityExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 64, self.RULE_equalityExpr)
+    def equalityExpr(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiscriptParser.EqualityExprContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 64
+        self.enterRecursionRule(localctx, 64, self.RULE_equalityExpr, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 363
-            self.relationalExpr()
-            self.state = 368
+            localctx = CompiscriptParser.EqualityPassthroughContext(self, localctx)
+            self._ctx = localctx
+            _prevctx = localctx
+
+            self.state = 370
+            self.relationalExpr(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 377
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==34 or _la==35:
-                self.state = 364
-                _la = self._input.LA(1)
-                if not(_la==34 or _la==35):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-                self.state = 365
-                self.relationalExpr()
-                self.state = 370
+            _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiscriptParser.EqualityOpContext(self, CompiscriptParser.EqualityExprContext(self, _parentctx, _parentState))
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_equalityExpr)
+                    self.state = 372
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 373
+                    localctx.op = self._input.LT(1)
+                    _la = self._input.LA(1)
+                    if not(_la==34 or _la==35):
+                        localctx.op = self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 374
+                    self.relationalExpr(0) 
+                self.state = 379
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
+                _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
             self._errHandler.recover(self, re)
         finally:
-            self.exitRule()
+            self.unrollRecursionContexts(_parentctx)
         return localctx
 
 
@@ -2541,57 +2685,105 @@ class CompiscriptParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def additiveExpr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiscriptParser.AdditiveExprContext)
-            else:
-                return self.getTypedRuleContext(CompiscriptParser.AdditiveExprContext,i)
-
 
         def getRuleIndex(self):
             return CompiscriptParser.RULE_relationalExpr
 
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+    class RelationalPassthroughContext(RelationalExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.RelationalExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def additiveExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.AdditiveExprContext,0)
+
+
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationalExpr" ):
-                return visitor.visitRelationalExpr(self)
+            if hasattr( visitor, "visitRelationalPassthrough" ):
+                return visitor.visitRelationalPassthrough(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class RelationalOpContext(RelationalExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.RelationalExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def relationalExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.RelationalExprContext,0)
+
+        def additiveExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.AdditiveExprContext,0)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelationalOp" ):
+                return visitor.visitRelationalOp(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-
-    def relationalExpr(self):
-
-        localctx = CompiscriptParser.RelationalExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 66, self.RULE_relationalExpr)
+    def relationalExpr(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiscriptParser.RelationalExprContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 66
+        self.enterRecursionRule(localctx, 66, self.RULE_relationalExpr, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 371
-            self.additiveExpr()
-            self.state = 376
+            localctx = CompiscriptParser.RelationalPassthroughContext(self, localctx)
+            self._ctx = localctx
+            _prevctx = localctx
+
+            self.state = 381
+            self.additiveExpr(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 388
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1030792151040) != 0):
-                self.state = 372
-                _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1030792151040) != 0)):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-                self.state = 373
-                self.additiveExpr()
-                self.state = 378
+            _alt = self._interp.adaptivePredict(self._input,28,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiscriptParser.RelationalOpContext(self, CompiscriptParser.RelationalExprContext(self, _parentctx, _parentState))
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_relationalExpr)
+                    self.state = 383
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 384
+                    localctx.op = self._input.LT(1)
+                    _la = self._input.LA(1)
+                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1030792151040) != 0)):
+                        localctx.op = self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 385
+                    self.additiveExpr(0) 
+                self.state = 390
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
+                _alt = self._interp.adaptivePredict(self._input,28,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
             self._errHandler.recover(self, re)
         finally:
-            self.exitRule()
+            self.unrollRecursionContexts(_parentctx)
         return localctx
 
 
@@ -2602,57 +2794,105 @@ class CompiscriptParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def multiplicativeExpr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiscriptParser.MultiplicativeExprContext)
-            else:
-                return self.getTypedRuleContext(CompiscriptParser.MultiplicativeExprContext,i)
-
 
         def getRuleIndex(self):
             return CompiscriptParser.RULE_additiveExpr
 
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+    class AdditiveOpContext(AdditiveExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.AdditiveExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def additiveExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.AdditiveExprContext,0)
+
+        def multiplicativeExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.MultiplicativeExprContext,0)
+
+
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAdditiveExpr" ):
-                return visitor.visitAdditiveExpr(self)
+            if hasattr( visitor, "visitAdditiveOp" ):
+                return visitor.visitAdditiveOp(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class AdditivePassthroughContext(AdditiveExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.AdditiveExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def multiplicativeExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.MultiplicativeExprContext,0)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAdditivePassthrough" ):
+                return visitor.visitAdditivePassthrough(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-
-    def additiveExpr(self):
-
-        localctx = CompiscriptParser.AdditiveExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 68, self.RULE_additiveExpr)
+    def additiveExpr(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiscriptParser.AdditiveExprContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 68
+        self.enterRecursionRule(localctx, 68, self.RULE_additiveExpr, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 379
-            self.multiplicativeExpr()
-            self.state = 384
+            localctx = CompiscriptParser.AdditivePassthroughContext(self, localctx)
+            self._ctx = localctx
+            _prevctx = localctx
+
+            self.state = 392
+            self.multiplicativeExpr(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 399
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==40 or _la==41:
-                self.state = 380
-                _la = self._input.LA(1)
-                if not(_la==40 or _la==41):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-                self.state = 381
-                self.multiplicativeExpr()
-                self.state = 386
+            _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiscriptParser.AdditiveOpContext(self, CompiscriptParser.AdditiveExprContext(self, _parentctx, _parentState))
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_additiveExpr)
+                    self.state = 394
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 395
+                    localctx.op = self._input.LT(1)
+                    _la = self._input.LA(1)
+                    if not(_la==40 or _la==41):
+                        localctx.op = self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 396
+                    self.multiplicativeExpr(0) 
+                self.state = 401
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
+                _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
             self._errHandler.recover(self, re)
         finally:
-            self.exitRule()
+            self.unrollRecursionContexts(_parentctx)
         return localctx
 
 
@@ -2663,57 +2903,105 @@ class CompiscriptParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def unaryExpr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiscriptParser.UnaryExprContext)
-            else:
-                return self.getTypedRuleContext(CompiscriptParser.UnaryExprContext,i)
-
 
         def getRuleIndex(self):
             return CompiscriptParser.RULE_multiplicativeExpr
 
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+    class MultiplicativePassthroughContext(MultiplicativeExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.MultiplicativeExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def unaryExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.UnaryExprContext,0)
+
+
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiplicativeExpr" ):
-                return visitor.visitMultiplicativeExpr(self)
+            if hasattr( visitor, "visitMultiplicativePassthrough" ):
+                return visitor.visitMultiplicativePassthrough(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class MultiplicativeOpContext(MultiplicativeExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.MultiplicativeExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def multiplicativeExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.MultiplicativeExprContext,0)
+
+        def unaryExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.UnaryExprContext,0)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiplicativeOp" ):
+                return visitor.visitMultiplicativeOp(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-
-    def multiplicativeExpr(self):
-
-        localctx = CompiscriptParser.MultiplicativeExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 70, self.RULE_multiplicativeExpr)
+    def multiplicativeExpr(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiscriptParser.MultiplicativeExprContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 70
+        self.enterRecursionRule(localctx, 70, self.RULE_multiplicativeExpr, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 387
+            localctx = CompiscriptParser.MultiplicativePassthroughContext(self, localctx)
+            self._ctx = localctx
+            _prevctx = localctx
+
+            self.state = 403
             self.unaryExpr()
-            self.state = 392
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 410
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 30786325577728) != 0):
-                self.state = 388
-                _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 30786325577728) != 0)):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-                self.state = 389
-                self.unaryExpr()
-                self.state = 394
+            _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiscriptParser.MultiplicativeOpContext(self, CompiscriptParser.MultiplicativeExprContext(self, _parentctx, _parentState))
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_multiplicativeExpr)
+                    self.state = 405
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 406
+                    localctx.op = self._input.LT(1)
+                    _la = self._input.LA(1)
+                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 30786325577728) != 0)):
+                        localctx.op = self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 407
+                    self.unaryExpr() 
+                self.state = 412
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
+                _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
             self._errHandler.recover(self, re)
         finally:
-            self.exitRule()
+            self.unrollRecursionContexts(_parentctx)
         return localctx
 
 
@@ -2724,23 +3012,49 @@ class CompiscriptParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+
+        def getRuleIndex(self):
+            return CompiscriptParser.RULE_unaryExpr
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class UnaryOpContext(UnaryExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.UnaryExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
         def unaryExpr(self):
             return self.getTypedRuleContext(CompiscriptParser.UnaryExprContext,0)
 
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnaryOp" ):
+                return visitor.visitUnaryOp(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class UnaryPassthroughContext(UnaryExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.UnaryExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
         def primaryExpr(self):
             return self.getTypedRuleContext(CompiscriptParser.PrimaryExprContext,0)
 
 
-        def getRuleIndex(self):
-            return CompiscriptParser.RULE_unaryExpr
-
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnaryExpr" ):
-                return visitor.visitUnaryExpr(self)
+            if hasattr( visitor, "visitUnaryPassthrough" ):
+                return visitor.visitUnaryPassthrough(self)
             else:
                 return visitor.visitChildren(self)
-
 
 
 
@@ -2750,24 +3064,27 @@ class CompiscriptParser ( Parser ):
         self.enterRule(localctx, 72, self.RULE_unaryExpr)
         self._la = 0 # Token type
         try:
-            self.state = 398
+            self.state = 416
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [41, 45]:
+                localctx = CompiscriptParser.UnaryOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 395
+                self.state = 413
+                localctx.op = self._input.LT(1)
                 _la = self._input.LA(1)
                 if not(_la==41 or _la==45):
-                    self._errHandler.recoverInline(self)
+                    localctx.op = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 396
+                self.state = 414
                 self.unaryExpr()
                 pass
             elif token in [11, 46, 47, 48, 49, 50, 51, 56, 59]:
+                localctx = CompiscriptParser.UnaryPassthroughContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 397
+                self.state = 415
                 self.primaryExpr()
                 pass
             else:
@@ -2789,27 +3106,65 @@ class CompiscriptParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def literalExpr(self):
-            return self.getTypedRuleContext(CompiscriptParser.LiteralExprContext,0)
 
+        def getRuleIndex(self):
+            return CompiscriptParser.RULE_primaryExpr
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class LeftHandSidePrimaryContext(PrimaryExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.PrimaryExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
         def leftHandSide(self):
             return self.getTypedRuleContext(CompiscriptParser.LeftHandSideContext,0)
 
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLeftHandSidePrimary" ):
+                return visitor.visitLeftHandSidePrimary(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class LiteralPrimaryContext(PrimaryExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.PrimaryExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def literalExpr(self):
+            return self.getTypedRuleContext(CompiscriptParser.LiteralExprContext,0)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteralPrimary" ):
+                return visitor.visitLiteralPrimary(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class ParenthesizedExprContext(PrimaryExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a CompiscriptParser.PrimaryExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
         def expression(self):
             return self.getTypedRuleContext(CompiscriptParser.ExpressionContext,0)
 
 
-        def getRuleIndex(self):
-            return CompiscriptParser.RULE_primaryExpr
-
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrimaryExpr" ):
-                return visitor.visitPrimaryExpr(self)
+            if hasattr( visitor, "visitParenthesizedExpr" ):
+                return visitor.visitParenthesizedExpr(self)
             else:
                 return visitor.visitChildren(self)
-
 
 
 
@@ -2818,26 +3173,29 @@ class CompiscriptParser ( Parser ):
         localctx = CompiscriptParser.PrimaryExprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 74, self.RULE_primaryExpr)
         try:
-            self.state = 406
+            self.state = 424
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [46, 47, 48, 51, 56]:
+                localctx = CompiscriptParser.LiteralPrimaryContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 400
+                self.state = 418
                 self.literalExpr()
                 pass
             elif token in [49, 50, 59]:
+                localctx = CompiscriptParser.LeftHandSidePrimaryContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 401
+                self.state = 419
                 self.leftHandSide()
                 pass
             elif token in [11]:
+                localctx = CompiscriptParser.ParenthesizedExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 402
+                self.state = 420
                 self.match(CompiscriptParser.T__10)
-                self.state = 403
+                self.state = 421
                 self.expression()
-                self.state = 404
+                self.state = 422
                 self.match(CompiscriptParser.T__11)
                 pass
             else:
@@ -2883,32 +3241,32 @@ class CompiscriptParser ( Parser ):
         localctx = CompiscriptParser.LiteralExprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 76, self.RULE_literalExpr)
         try:
-            self.state = 413
+            self.state = 431
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [56]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 408
+                self.state = 426
                 self.match(CompiscriptParser.Literal)
                 pass
             elif token in [51]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 409
+                self.state = 427
                 self.arrayLiteral()
                 pass
             elif token in [46]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 410
+                self.state = 428
                 self.match(CompiscriptParser.T__45)
                 pass
             elif token in [47]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 411
+                self.state = 429
                 self.match(CompiscriptParser.T__46)
                 pass
             elif token in [48]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 412
+                self.state = 430
                 self.match(CompiscriptParser.T__47)
                 pass
             else:
@@ -2959,16 +3317,16 @@ class CompiscriptParser ( Parser ):
         self.enterRule(localctx, 78, self.RULE_leftHandSide)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 415
+            self.state = 433
             self.primaryAtom()
-            self.state = 419
+            self.state = 437
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 416
+                    self.state = 434
                     self.suffixOp() 
-                self.state = 421
+                self.state = 439
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
 
@@ -3054,39 +3412,39 @@ class CompiscriptParser ( Parser ):
         self.enterRule(localctx, 80, self.RULE_primaryAtom)
         self._la = 0 # Token type
         try:
-            self.state = 431
+            self.state = 449
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [59]:
                 localctx = CompiscriptParser.IdentifierExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 422
+                self.state = 440
                 self.match(CompiscriptParser.Identifier)
                 pass
             elif token in [49]:
                 localctx = CompiscriptParser.NewExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 423
+                self.state = 441
                 self.match(CompiscriptParser.T__48)
-                self.state = 424
+                self.state = 442
                 self.match(CompiscriptParser.Identifier)
-                self.state = 425
+                self.state = 443
                 self.match(CompiscriptParser.T__10)
-                self.state = 427
+                self.state = 445
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & 652988960619890688) != 0):
-                    self.state = 426
+                    self.state = 444
                     self.arguments()
 
 
-                self.state = 429
+                self.state = 447
                 self.match(CompiscriptParser.T__11)
                 pass
             elif token in [50]:
                 localctx = CompiscriptParser.ThisExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 430
+                self.state = 448
                 self.match(CompiscriptParser.T__49)
                 pass
             else:
@@ -3175,41 +3533,41 @@ class CompiscriptParser ( Parser ):
         self.enterRule(localctx, 82, self.RULE_suffixOp)
         self._la = 0 # Token type
         try:
-            self.state = 444
+            self.state = 462
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [11]:
                 localctx = CompiscriptParser.CallExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 433
+                self.state = 451
                 self.match(CompiscriptParser.T__10)
-                self.state = 435
+                self.state = 453
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & 652988960619890688) != 0):
-                    self.state = 434
+                    self.state = 452
                     self.arguments()
 
 
-                self.state = 437
+                self.state = 455
                 self.match(CompiscriptParser.T__11)
                 pass
             elif token in [51]:
                 localctx = CompiscriptParser.IndexExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 438
+                self.state = 456
                 self.match(CompiscriptParser.T__50)
-                self.state = 439
+                self.state = 457
                 self.expression()
-                self.state = 440
+                self.state = 458
                 self.match(CompiscriptParser.T__51)
                 pass
             elif token in [9]:
                 localctx = CompiscriptParser.PropertyAccessExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 442
+                self.state = 460
                 self.match(CompiscriptParser.T__8)
-                self.state = 443
+                self.state = 461
                 self.match(CompiscriptParser.Identifier)
                 pass
             else:
@@ -3257,17 +3615,17 @@ class CompiscriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 446
+            self.state = 464
             self.expression()
-            self.state = 451
+            self.state = 469
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==29:
-                self.state = 447
+                self.state = 465
                 self.match(CompiscriptParser.T__28)
-                self.state = 448
+                self.state = 466
                 self.expression()
-                self.state = 453
+                self.state = 471
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -3313,29 +3671,29 @@ class CompiscriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 454
+            self.state = 472
             self.match(CompiscriptParser.T__50)
-            self.state = 463
+            self.state = 481
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 652988960619890688) != 0):
-                self.state = 455
+                self.state = 473
                 self.expression()
-                self.state = 460
+                self.state = 478
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==29:
-                    self.state = 456
+                    self.state = 474
                     self.match(CompiscriptParser.T__28)
-                    self.state = 457
+                    self.state = 475
                     self.expression()
-                    self.state = 462
+                    self.state = 480
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 465
+            self.state = 483
             self.match(CompiscriptParser.T__51)
         except RecognitionException as re:
             localctx.exception = re
@@ -3376,17 +3734,17 @@ class CompiscriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 467
+            self.state = 485
             self.baseType()
-            self.state = 472
+            self.state = 490
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==51:
-                self.state = 468
+                self.state = 486
                 self.match(CompiscriptParser.T__50)
-                self.state = 469
+                self.state = 487
                 self.match(CompiscriptParser.T__51)
-                self.state = 474
+                self.state = 492
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -3428,7 +3786,7 @@ class CompiscriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 475
+            self.state = 493
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 639511147086610432) != 0)):
                 self._errHandler.recoverInline(self)
@@ -3443,6 +3801,52 @@ class CompiscriptParser ( Parser ):
             self.exitRule()
         return localctx
 
+
+
+    def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
+        if self._predicates == None:
+            self._predicates = dict()
+        self._predicates[30] = self.logicalOrExpr_sempred
+        self._predicates[31] = self.logicalAndExpr_sempred
+        self._predicates[32] = self.equalityExpr_sempred
+        self._predicates[33] = self.relationalExpr_sempred
+        self._predicates[34] = self.additiveExpr_sempred
+        self._predicates[35] = self.multiplicativeExpr_sempred
+        pred = self._predicates.get(ruleIndex, None)
+        if pred is None:
+            raise Exception("No predicate with index:" + str(ruleIndex))
+        else:
+            return pred(localctx, predIndex)
+
+    def logicalOrExpr_sempred(self, localctx:LogicalOrExprContext, predIndex:int):
+            if predIndex == 0:
+                return self.precpred(self._ctx, 2)
+         
+
+    def logicalAndExpr_sempred(self, localctx:LogicalAndExprContext, predIndex:int):
+            if predIndex == 1:
+                return self.precpred(self._ctx, 2)
+         
+
+    def equalityExpr_sempred(self, localctx:EqualityExprContext, predIndex:int):
+            if predIndex == 2:
+                return self.precpred(self._ctx, 2)
+         
+
+    def relationalExpr_sempred(self, localctx:RelationalExprContext, predIndex:int):
+            if predIndex == 3:
+                return self.precpred(self._ctx, 2)
+         
+
+    def additiveExpr_sempred(self, localctx:AdditiveExprContext, predIndex:int):
+            if predIndex == 4:
+                return self.precpred(self._ctx, 2)
+         
+
+    def multiplicativeExpr_sempred(self, localctx:MultiplicativeExprContext, predIndex:int):
+            if predIndex == 5:
+                return self.precpred(self._ctx, 2)
+         
 
 
 

@@ -168,6 +168,7 @@ pytest -q
 4. **Ejecutar análisis**  
    ```bash
    python3 program/Driver.py program/program.cps
+   python3 program/Driver.py program/program2.cps
    ```
 
 ### IDE Web con Streamlit

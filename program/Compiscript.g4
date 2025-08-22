@@ -71,7 +71,7 @@ classDeclaration: 'class' Identifier (':' Identifier)? '{' classMember* '}';
 classMember: functionDeclaration | variableDeclaration | constantDeclaration;
 
 // ------------------
-// Expression Rules — Operator Precedence
+// Expression Rules — Recursión izquierda con labels
 // ------------------
 
 expression: assignmentExpr;
@@ -87,38 +87,44 @@ conditionalExpr
   ;
 
 logicalOrExpr
-  : logicalAndExpr ( '||' logicalAndExpr )*
+  : logicalOrExpr '||' logicalAndExpr              # LogicalOrOp
+  | logicalAndExpr                                 # LogicalOrPassthrough
   ;
 
 logicalAndExpr
-  : equalityExpr ( '&&' equalityExpr )*
+  : logicalAndExpr '&&' equalityExpr               # LogicalAndOp
+  | equalityExpr                                   # LogicalAndPassthrough
   ;
 
 equalityExpr
-  : relationalExpr ( ('==' | '!=') relationalExpr )*
+  : equalityExpr op=('==' | '!=') relationalExpr   # EqualityOp
+  | relationalExpr                                 # EqualityPassthrough
   ;
 
 relationalExpr
-  : additiveExpr ( ('<' | '<=' | '>' | '>=') additiveExpr )*
+  : relationalExpr op=('<' | '<=' | '>' | '>=') additiveExpr  # RelationalOp
+  | additiveExpr                                              # RelationalPassthrough
   ;
 
 additiveExpr
-  : multiplicativeExpr ( ('+' | '-') multiplicativeExpr )*
+  : additiveExpr op=('+' | '-') multiplicativeExpr # AdditiveOp
+  | multiplicativeExpr                             # AdditivePassthrough
   ;
 
 multiplicativeExpr
-  : unaryExpr ( ('*' | '/' | '%') unaryExpr )*
+  : multiplicativeExpr op=('*' | '/' | '%') unaryExpr # MultiplicativeOp
+  | unaryExpr                                         # MultiplicativePassthrough
   ;
 
 unaryExpr
-  : ('-' | '!') unaryExpr
-  | primaryExpr
+  : op=('-' | '!') unaryExpr                       # UnaryOp
+  | primaryExpr                                    # UnaryPassthrough
   ;
 
 primaryExpr
-  : literalExpr
-  | leftHandSide
-  | '(' expression ')'
+  : literalExpr                                    # LiteralPrimary
+  | leftHandSide                                   # LeftHandSidePrimary
+  | '(' expression ')'                             # ParenthesizedExpr
   ;
 
 literalExpr
