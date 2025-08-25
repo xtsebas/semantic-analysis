@@ -110,7 +110,7 @@ def create_tree_graph(parse_tree: ParserRuleContext) -> go.Figure:
             child_count = node.getChildCount()
             for i in range(child_count):
                 child = node.getChild(i)
-                child_position = position + (i - child_count/2) * (2.0 / (level + 1))
+                child_position = position + (i - child_count/2) * (4.0 / max(1, level * 0.5))
                 traverse_tree(child, current_id, level + 1, child_position)
     
     traverse_tree(parse_tree)
@@ -140,9 +140,9 @@ def create_tree_graph(parse_tree: ParserRuleContext) -> go.Figure:
             y=[pos[1]],
             mode='markers+text',
             marker=dict(
-                size=max(15, len(node['text']) * 2),
+                size=max(25, len(node['text']) * 3),
                 color=node['color'],
-                line=dict(color='#333333', width=1)
+                line=dict(color='#333333', width=2)
             ),
             text=node['text'],
             textposition='middle center',
@@ -157,8 +157,8 @@ def create_tree_graph(parse_tree: ParserRuleContext) -> go.Figure:
         xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, title=""),
         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, title=""),
         plot_bgcolor='white',
-        height=700,
-        margin=dict(l=20, r=20, t=50, b=20)
+        height=900,
+        margin=dict(l=100, r=100, t=80, b=50)
     )
     
     return fig
