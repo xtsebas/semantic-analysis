@@ -5,8 +5,13 @@ from typing import Dict, List, Optional
 
 from antlr4 import ParserRuleContext
 
-from CompiscriptParser import CompiscriptParser
-from CompiscriptVisitor import CompiscriptVisitor
+try:
+    from program.CompiscriptParser import CompiscriptParser
+    from program.CompiscriptVisitor import CompiscriptVisitor
+except ImportError:
+    # Fallback for different import paths
+    from CompiscriptParser import CompiscriptParser
+    from CompiscriptVisitor import CompiscriptVisitor
 
 
 # -------------------------

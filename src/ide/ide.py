@@ -4,7 +4,10 @@ import os
 import sys
 import tempfile
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict, Any
+import plotly.graph_objects as go
+import plotly.express as px
+from antlr4 import ParserRuleContext
 
 # Add project paths for imports
 repo_root = Path(__file__).parent.parent.parent
@@ -33,10 +36,10 @@ def save_temp_file(content: str) -> str:
         return f.name
 
 
-def run_compilation(file_path: str) -> Tuple[bool, List[str], List[SemanticIssue], Optional[str]]:
+def run_compilation(file_path: str) -> Tuple[bool, List[str], List[SemanticIssue], Optional[str], Optional[ParserRuleContext]]:
     """
     Run compilation using the parser and semantic analyzer.
-    Returns: (success, syntax_errors, semantic_errors, tree_output)
+    Returns: (success, syntax_errors, semantic_errors, tree_output, parse_tree)
     """
     try:
         # Parse the file
@@ -45,7 +48,7 @@ def run_compilation(file_path: str) -> Tuple[bool, List[str], List[SemanticIssue
         # Check for syntax errors
         if result.issues:
             syntax_errors = [f"Line {e.line}, Col {e.column}: {e.message}" for e in result.issues]
-            return False, syntax_errors, [], None
+            return False, syntax_errors, [], None, None
         
         # Run semantic analysis
         visitor = SemanticVisitor()
@@ -53,14 +56,112 @@ def run_compilation(file_path: str) -> Tuple[bool, List[str], List[SemanticIssue
         
         # Check for semantic errors
         if visitor.issues:
-            return False, [], visitor.issues, None
+            return False, [], visitor.issues, None, result.tree
         
         # Get tree representation
         tree_output = tree_as_lisp(result)
-        return True, [], [], tree_output
+        return True, [], [], tree_output, result.tree
         
     except Exception as e:
-        return False, [f"Compilation error: {str(e)}"], [], None
+        return False, [f"Compilation error: {str(e)}"], [], None, None
+
+
+def create_tree_graph(parse_tree: ParserRuleContext) -> go.Figure:
+    """Create a visual syntax tree using Plotly"""
+    nodes = []
+    edges = []
+    positions = {}
+    node_id = 0
+    
+    def traverse_tree(node, parent_id=None, level=0, position=0):
+        nonlocal node_id
+        
+        current_id = node_id
+        node_id += 1
+        
+        # Get node text
+        if hasattr(node, 'getRuleIndex'):
+            # Rule node
+            rule_name = node.__class__.__name__.replace('Context', '')
+            node_text = rule_name
+            color = '#E3F2FD'  # Light blue for rule nodes
+        else:
+            # Terminal node
+            node_text = str(node).replace('\n', '\\n')[:20]
+            if len(str(node)) > 20:
+                node_text += "..."
+            color = '#FFF3E0'  # Light orange for terminal nodes
+        
+        nodes.append({
+            'id': current_id,
+            'text': node_text,
+            'level': level,
+            'position': position,
+            'color': color
+        })
+        
+        positions[current_id] = (position, -level)
+        
+        if parent_id is not None:
+            edges.append({'from': parent_id, 'to': current_id})
+        
+        # Process children
+        if hasattr(node, 'getChildCount'):
+            child_count = node.getChildCount()
+            for i in range(child_count):
+                child = node.getChild(i)
+                child_position = position + (i - child_count/2) * (2.0 / (level + 1))
+                traverse_tree(child, current_id, level + 1, child_position)
+    
+    traverse_tree(parse_tree)
+    
+    # Create the plot
+    fig = go.Figure()
+    
+    # Add edges
+    for edge in edges:
+        from_pos = positions[edge['from']]
+        to_pos = positions[edge['to']]
+        
+        fig.add_trace(go.Scatter(
+            x=[from_pos[0], to_pos[0], None],
+            y=[from_pos[1], to_pos[1], None],
+            mode='lines',
+            line=dict(color='#666666', width=1.5),
+            showlegend=False,
+            hoverinfo='skip'
+        ))
+    
+    # Add nodes
+    for node in nodes:
+        pos = positions[node['id']]
+        fig.add_trace(go.Scatter(
+            x=[pos[0]],
+            y=[pos[1]],
+            mode='markers+text',
+            marker=dict(
+                size=max(15, len(node['text']) * 2),
+                color=node['color'],
+                line=dict(color='#333333', width=1)
+            ),
+            text=node['text'],
+            textposition='middle center',
+            textfont=dict(size=10, color='black'),
+            showlegend=False,
+            hovertemplate=f"<b>{node['text']}</b><br>Level: {node['level']}<extra></extra>"
+        ))
+    
+    fig.update_layout(
+        title=" Syntax Tree Visualization",
+        showlegend=False,
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, title=""),
+        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, title=""),
+        plot_bgcolor='white',
+        height=700,
+        margin=dict(l=20, r=20, t=50, b=20)
+    )
+    
+    return fig
 
 
 def main():
@@ -163,12 +264,13 @@ def main():
                 
                 try:
                     # Run compilation
-                    success, syntax_errors, semantic_errors, tree_output = run_compilation(temp_file)
+                    success, syntax_errors, semantic_errors, tree_output, parse_tree = run_compilation(temp_file)
                     st.session_state.compilation_results = {
                         'success': success,
                         'syntax_errors': syntax_errors,
                         'semantic_errors': semantic_errors,
-                        'tree_output': tree_output
+                        'tree_output': tree_output,
+                        'parse_tree': parse_tree
                     }
                 finally:
                     # Clean up temp file
@@ -184,10 +286,26 @@ def main():
             if results['success']:
                 st.success("✅ Compilation successful!")
                 
-                # Show syntax tree
-                if results['tree_output']:
-                    with st.expander("🌳 Syntax Tree", expanded=False):
-                        st.code(results['tree_output'], language='lisp')
+                # Show syntax tree options
+                if results['tree_output'] and results['parse_tree']:
+                    tree_view_type = st.radio(
+                        "Tree Visualization:",
+                        options=["Text (Lisp-style)", "Graphical"],
+                        horizontal=True
+                    )
+                    
+                    if tree_view_type == "Text (Lisp-style)":
+                        with st.expander(" Syntax Tree (Text)", expanded=True):
+                            st.code(results['tree_output'], language='lisp')
+                    else:
+                        with st.expander(" Syntax Tree (Graphical)", expanded=True):
+                            try:
+                                fig = create_tree_graph(results['parse_tree'])
+                                st.plotly_chart(fig, use_container_width=True)
+                            except Exception as e:
+                                st.error(f"Error creating tree visualization: {str(e)}")
+                                # Fallback to text view
+                                st.code(results['tree_output'], language='lisp')
             
             else:
                 st.error("❌ Compilation failed!")
