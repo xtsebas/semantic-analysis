@@ -15,13 +15,13 @@ from semantic.semantic import SemanticVisitor
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Compiscript parser — imprime el árbol sintáctico del archivo .cps"
+        description="Compiscript — parsea y realiza análisis semántico de un archivo .cps"
     )
     ap.add_argument("file", help="Ruta a archivo .cps (fuente Compiscript)")
     ap.add_argument(
         "--quiet", "-q",
         action="store_true",
-        help="No imprimir el árbol si no hay errores (salida silenciosa)."
+        help="No imprimir el árbol si no hay errores."
     )
     args = ap.parse_args()
 
@@ -32,14 +32,14 @@ def main():
     # 1) Parseo
     result = parse_file(args.file)
 
-    # 2) Errores de sintaxis (si hay)
+    # 2) Errores de sintaxis
     if result.issues:
         print("Errores de sintaxis:", file=sys.stderr)
         for e in result.issues:
             print(f"  línea {e.line}, col {e.column}: {e.message}", file=sys.stderr)
         sys.exit(1)
 
-    # 3) Pasada semántica
+    # 3) Análisis semántico
     visitor = SemanticVisitor()
     _ = result.tree.accept(visitor)
 
@@ -49,13 +49,11 @@ def main():
             print(f"  línea {e.line}, col {e.column}: {e.message}", file=sys.stderr)
         sys.exit(1)
 
-    # --- dump opcional de la tabla de símbolos ---
+    # 4) Dump opcional de la tabla de símbolos
     for line in visitor.symtab.export_as_lines():
         print(line)
-    # ---------------------------------------------
 
-
-    # 4) (Opcional) imprimir el árbol si no hay errores y no está --quiet
+    # 5) (Opcional) imprimir el árbol
     if not args.quiet:
         print(tree_as_lisp(result))
 
