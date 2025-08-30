@@ -228,10 +228,31 @@ class SemanticVisitor(CompiscriptVisitor):
         return None
     
     def _type_of_simple_identifier(self, node, fallback_type):
+        try:
+            txt = node.getText()
+        except Exception:
+            return fallback_type
+        if not txt or any(ch in txt for ch in ".([)]"):
+            return fallback_type
+
+        # variable/parámetro
+        var = self.symtab.resolve_var(txt)
+        if var:
+            return var.type
+
+        # campo de clase (this.txt implícito)
+        if self.current_class:
+            member, _ = self._resolve_member(self.current_class, txt)
+            if member and not member.is_method:
+                return member.type
+
+        return fallback_type
+    
+    def _type_of_simple_identifier_var_only(self, node, fallback_type):
         """
         Si `node` textual es un identificador simple (sin '.', '(', '['),
-        y existe una VariableSymbol con ese nombre en el scope, devuelve su tipo.
-        En otro caso, vuelve a fallback_type.
+        devuelve el tipo de la variable/parámetro en el scope, si existe.
+        No intenta resolver miembros de clase.
         """
         try:
             txt = node.getText()
@@ -241,6 +262,8 @@ class SemanticVisitor(CompiscriptVisitor):
             return fallback_type
         var = self.symtab.resolve_var(txt)
         return var.type if var else fallback_type
+    
+
 
     # ========================
     # program / block / statements
@@ -288,12 +311,9 @@ class SemanticVisitor(CompiscriptVisitor):
             self.error(ctx, f"Constante '{name}' ya está definida en este ámbito.")
         return None
 
-    # assignment (statement rule):
-    #   Identifier '=' expression ';'
-    #   | expression '.' Identifier '=' expression ';'
     def visitAssignment(self, ctx):
         if ctx.Identifier():
-            # asignación simple
+            # asignación simple: Id '=' expr ';'
             name = ctx.Identifier().getText()
             var = self.symtab.resolve_var(name)
             if not var:
@@ -307,7 +327,7 @@ class SemanticVisitor(CompiscriptVisitor):
                 self.error(ctx, f"Tipos incompatibles en asignación: {self.symtab._tname(var.type)} = {self.symtab._tname(rhs_t)}.")
             return var.type
         else:
-            # property assignment: expression '.' Identifier '=' expression ';'
+            # asignación a propiedad: expr '.' Id '=' expr ';'
             recv_t = self.visit(ctx.expression(0))
             if not is_object(recv_t):
                 self.error(ctx, "Asignación a propiedad requiere objeto a la izquierda del '.'.")
@@ -316,6 +336,7 @@ class SemanticVisitor(CompiscriptVisitor):
             if not csym:
                 self.error(ctx, f"Clase '{recv_t.class_name}' no está declarada.")
                 return TypeKind.ERROR
+
             mname = ctx.Identifier(0).getText()
             member, owner = self._resolve_member(csym, mname)
             if not member:
@@ -324,11 +345,15 @@ class SemanticVisitor(CompiscriptVisitor):
             if member.is_method:
                 self.error(ctx, f"No se puede asignar a método '{mname}'.")
                 return TypeKind.ERROR
+
             rhs_t = self.visit(ctx.expression(1))
-            rhs_t = self._type_of_simple_identifier(ctx.expression(1), rhs_t)
+            rhs_t = self._type_of_simple_identifier_var_only(ctx.expression(1), rhs_t)
+            # rhs_t = self._type_of_simple_identifier(ctx.expression(1), rhs_t)
+
             if not self.is_assignable(member.type, rhs_t):
                 self.error(ctx, f"Tipos incompatibles al asignar {mname}: {self.symtab._tname(member.type)} = {self.symtab._tname(rhs_t)}.")
             return member.type
+
 
 
     def visitExpressionStatement(self, ctx):
@@ -640,7 +665,8 @@ class SemanticVisitor(CompiscriptVisitor):
             self.error(ctx, f"No se puede asignar a método '{mname}'.")
             return TypeKind.ERROR
         rhs_t = self.visit(ctx.assignmentExpr())
-        rhs_t = self._type_of_simple_identifier(ctx.assignmentExpr(), rhs_t)
+        rhs_t = self._type_of_simple_identifier_var_only(ctx.assignmentExpr(), rhs_t)
+        # rhs_t = self._type_of_simple_identifier(ctx.assignmentExpr(), rhs_t)
         if not self.is_assignable(member.type, rhs_t):
             self.error(ctx, f"Tipos incompatibles al asignar {mname}: {self.symtab._tname(member.type)} = {self.symtab._tname(rhs_t)}.")
         return member.type
@@ -800,18 +826,22 @@ class SemanticVisitor(CompiscriptVisitor):
 
     def visitIdentifierExpr(self, ctx):
         name = ctx.Identifier().getText()
+        # 1) variable local / parámetro (si no existe -> None)
         var = self.symtab.resolve_var(name)
         if var:
-            # marca SOLO en este nodo; leftHandSide lo leerá
-            setattr(ctx, "_resolved_var", var)
+            setattr(ctx, "_resolved_var", var)  # útil para LHS asignable en leftHandSide
             return var.type
-        # ¿función global?
+
+        # 2) función global (permitir que un posterior CallExpr la invoque)
         f = self.symtab.resolve_func(name)
         if f:
             setattr(ctx, "_as_func", f)
             return TypeKind.ERROR
-        # puede ser nombre de clase (solo con 'new'); como expresión sola no es válido
+
+        # 3) nada más: NO resolvemos implícitamente campos de clase aquí
+        #    (para acceder a un campo requiere 'this.nombre' o 'obj.nombre')
         return TypeKind.ERROR
+
 
     def visitNewExpr(self, ctx):
         cname = ctx.Identifier().getText()
