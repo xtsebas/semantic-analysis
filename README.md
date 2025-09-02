@@ -59,6 +59,7 @@ semantic-analysis/
   - Implementa `Visitor` o `Listener` para recorrer el ParseTree.  
   - Construye y gestiona la **tabla de símbolos** (alcances, variables, funciones).  
   - Verifica tipos, ámbitos, firmas de funciones, control de flujo, clases, estructuras…
+  - Para entender mejor, leer [funcionalidad.md](./funcionalidad.md)
 
 - **src/ide/ide.py**  
   - Pequeño editor/CLI que permite abrir un `.cps`, parsearlo y mostrar errores sintácticos o semánticos en consola.
