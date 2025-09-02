@@ -226,6 +226,13 @@ class SemanticVisitor(CompiscriptVisitor):
         if hasattr(ctx, "type"):
             return ctx.type()
         return None
+
+    def _behaves_as_string(self, t) -> bool:
+        if t == TypeKind.STRING:
+            return True
+        if is_object(t):
+            return self._has_to_string_method(t.class_name)
+        return False
     
     def _type_of_simple_identifier(self, node, fallback_type):
         try:
@@ -733,7 +740,7 @@ class SemanticVisitor(CompiscriptVisitor):
         lt = self.visit(ctx.additiveExpr())
         rt = self.visit(ctx.multiplicativeExpr())
         op = ctx.op.text
-        if op == '+' and (lt == TypeKind.STRING or rt == TypeKind.STRING):
+        if op == '+' and (self._behaves_as_string(lt) or self._behaves_as_string(rt)):
             return TypeKind.STRING
         if not (TypeKind.is_numeric(lt) and TypeKind.is_numeric(rt)):
             self.error(ctx, f"Operación aritmética requiere numéricos, no {self.symtab._tname(lt)} y {self.symtab._tname(rt)}.")
@@ -1005,12 +1012,17 @@ class SemanticVisitor(CompiscriptVisitor):
             return self.is_assignable(target.elem, source.elem)
         if is_array(target) != is_array(source):
             return False
+
         # objetos
         if is_object(target) and is_object(source):
-            # compatibilidad nominal simple: mismo nombre de clase o derivada
             return self._is_class_assignable(target.class_name, source.class_name)
+
+        if target == TypeKind.STRING and is_object(source):
+            return True
+
         if is_object(target) or is_object(source):
             return False
+
         # primitivos
         if target == source:
             return True
@@ -1019,6 +1031,22 @@ class SemanticVisitor(CompiscriptVisitor):
         if source == TypeKind.NULL and target in (TypeKind.STRING,):
             return True
         return False
+
+
+    def _has_to_string_method(self, cls_name: str) -> bool:
+        cls = self.symtab.resolve_class(cls_name)
+        while cls is not None:
+            m = cls.members.get("toString")
+            if m and getattr(m, "is_method", False):
+                # sin parámetros y retorno string
+                params = getattr(m, "params", None) or []
+                if len(params) == 0 and getattr(m, "return_type", None) == TypeKind.STRING:
+                    return True
+            # subir a la clase base
+            base = getattr(cls, "_base_name", None)
+            cls = self.symtab.resolve_class(base) if base else None
+        return False
+
 
     def _is_class_assignable(self, target_cls: str, source_cls: str) -> bool:
         if target_cls == source_cls:
