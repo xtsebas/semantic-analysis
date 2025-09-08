@@ -265,12 +265,20 @@ def main():
                 try:
                     # Run compilation
                     success, syntax_errors, semantic_errors, tree_output, parse_tree = run_compilation(temp_file)
+                    
+                    # Get visitor for symbol table
+                    visitor = None
+                    if parse_tree and not syntax_errors:
+                        visitor = SemanticVisitor()
+                        _ = parse_tree.accept(visitor)
+                    
                     st.session_state.compilation_results = {
                         'success': success,
                         'syntax_errors': syntax_errors,
                         'semantic_errors': semantic_errors,
                         'tree_output': tree_output,
-                        'parse_tree': parse_tree
+                        'parse_tree': parse_tree,
+                        'visitor': visitor
                     }
                 finally:
                     # Clean up temp file
@@ -324,6 +332,63 @@ def main():
         
         else:
             st.info("👆 Click 'Compile & Analyze' to see results")
+    
+    # Symbol Table Section (below main columns)
+    if st.session_state.compilation_results and st.session_state.compilation_results.get('visitor'):
+        visitor = st.session_state.compilation_results['visitor']
+        
+        with st.expander("📋 Symbol Table", expanded=False):
+            st.markdown("**Current Symbol Table State:**")
+            
+            # Get symbol table content
+            symbol_table_lines = visitor.symtab.export_as_lines()
+            
+            # Create tabs for better organization
+            tab1, tab2, tab3 = st.tabs(["📊 Full Table", "🔍 Scopes", "📚 Functions & Classes"])
+            
+            with tab1:
+                st.code("\n".join(symbol_table_lines), language="text")
+            
+            with tab2:
+                st.markdown("**Scope Information:**")
+                scope_info = []
+                for i, scope in enumerate(visitor.symtab.scopes):
+                    scope_name = "Global" if i == 0 else f"Scope {i}"
+                    scope_info.append(f"{scope_name}: {len(scope)} symbols")
+                    for name, symbol in scope.items():
+                        if hasattr(symbol, 'name'):
+                            symbol_type = type(symbol).__name__
+                            scope_info.append(f"  • {name}: {symbol_type}")
+                
+                st.code("\n".join(scope_info), language="text")
+            
+            with tab3:
+                st.markdown("**Functions:**")
+                if visitor.symtab.functions:
+                    func_info = []
+                    for fname, func in visitor.symtab.functions.items():
+                        params = ", ".join(f"{n}: {visitor.symtab._tname(t)}" for n, t in func.params)
+                        ret_type = visitor.symtab._tname(func.return_type)
+                        func_info.append(f"{fname}({params}) -> {ret_type}")
+                    st.code("\n".join(func_info), language="text")
+                else:
+                    st.info("No functions defined")
+                
+                st.markdown("**Classes:**")
+                if visitor.symtab.classes:
+                    class_info = []
+                    for cname, cls in visitor.symtab.classes.items():
+                        class_info.append(f"class {cname}:")
+                        for member_name, member in cls.members.items():
+                            if member.is_method:
+                                params = ", ".join(f"{n}: {visitor.symtab._tname(t)}" for n, t in (member.params or []))
+                                ret_type = visitor.symtab._tname(member.return_type) if member.return_type else "void"
+                                class_info.append(f"  • method {member_name}({params}) -> {ret_type}")
+                            else:
+                                class_info.append(f"  • field {member_name}: {visitor.symtab._tname(member.type)}")
+                    st.code("\n".join(class_info), language="text")
+                else:
+                    st.info("No classes defined")
     
     # Footer
     st.markdown("---")
